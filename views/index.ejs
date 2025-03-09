@@ -1,0 +1,82 @@
+<%- include('partials/header.ejs'); -%>
+
+   
+    <div class="container">
+      <div class="top-content">
+        <h3> Welcome to my Book snap!</h3>
+      <p>Here, you can explore, review, and share your thoughts on your favorite books. Whether you want to write a new review, edit an existing one, or discover what others think, this is your space to dive into the world of books. Start sharing your literary journey today!</p>
+      </div>
+  
+      <div class="input">
+        <div class="dropdown">
+          <button class="btn dropdown-toggle but" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sort By
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item " href="/?sort=ratings">Ratings</a></li>
+            <li><a class="dropdown-item" href="/?sort=dateofPublish">Recent</a></li>
+            
+          </ul>
+        </div>
+        <form action="/search" method="GET" class="searchbutton">
+          <input type="search" name="query" class="form-control text-bg-light" placeholder="Search..." aria-label="Search">
+          <button type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+              </svg>
+          </button>
+      </form>
+      
+        <a href="/addNew">
+          <button class="btn but " type="button"  aria-expanded="false" >
+            Add New Book
+          </button>
+        </a>
+       
+      </div>
+
+
+      <div class="row">
+        <% if (message) { %>
+          <div class="alert alert-warning mt-5" role="alert">
+              <%= message %>
+          </div>
+      <% } %>
+      
+      
+        <% booksitem.forEach((book)=>{   %>
+          <div class="col-md-4 mb-4 my-4">
+            <div class="card ">
+              <img src="<%=book.cover_url.replace('-S.jpg', '-M.jpg')%>" alt="<%=book.title%>" class="card-img-top book-cover">
+
+              <div class="card-body">
+                 <p ><em><b class="title"><%=book.title%></b></em></p>
+                <h6><%=book.author%></h6>
+                <div class="rating"><strong>Rating:</strong>
+
+                  <% for(let i = 0; i < book.rating; i++) { %>
+                      <span>⭐</span>
+                  <% } %>
+              </div>
+                <h6><p>Year of Publish:</p><%=book.dateofpublish%></h6>
+                <h6><p>Genre:</p><%=book.genre%></h6>
+                <div class="buttonclass">
+                 <a href="/review/<%=book.id%>"> <button class="btn btn-dark but"> Read Review</button></a>
+                <form method="post" action="/delete/<%=book.id%>">
+                  <button class="btn btn-danger" type="submit"> Delete Book</button>
+
+                </form>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+
+      <%  })%>
+      </div>
+      
+    </div>
+   
+
+   <%- include('partials/footer.ejs'); -%>

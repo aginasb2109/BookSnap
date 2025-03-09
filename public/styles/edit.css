@@ -1,0 +1,34 @@
+body{
+    margin:0px;
+    padding:0px;
+    
+}
+
+
+header{
+    background : linear-gradient(to right, #001F3F, #003366, #004080);
+}
+
+
+.review {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+.content {
+    flex: 1; 
+    min-width: 400px; 
+    max-width: 600px; 
+}
+
+.img {
+    flex: 0 0 auto; 
+}
+
+#reviewInput {
+    height: 200px; 
+    resize: vertical;
+}

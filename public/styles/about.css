@@ -1,0 +1,14 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+header{
+    background : linear-gradient(to right, #001F3F, #003366, #004080);
+}
+body{
+    font-size: 25px;
+}
+.container >ul{
+    list-style: none;
+    
+}

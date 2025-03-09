@@ -1,0 +1,30 @@
+body{
+    margin:0px;
+    padding:0px;
+    
+}
+
+
+header{
+    background : linear-gradient(to right, #001F3F, #003366, #004080);
+}
+
+
+.review{
+    display:flex;
+    gap:20px;
+
+}
+.content{
+    display:flex;
+    gap:7px;
+    flex-direction: column;
+}
+.edit_button{
+    width:300px;
+
+
+}
+.review{
+    font-family: 'Poppins', sans-serif;
+}

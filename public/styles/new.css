@@ -1,0 +1,46 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+
+
+
+header{
+    background : linear-gradient(to right, #001F3F, #003366, #004080);
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: flex-start; 
+    gap: 5px;
+    width: fit-content; 
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 25px;
+    color: gray;
+    cursor: pointer;
+}
+
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold;
+}
+
+
+
+
+.btn.form-control{
+    width:100px;
+}
+
+
+
+
