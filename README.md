@@ -31,7 +31,7 @@ This project uses the **Open Library API** to fetch book details dynamically.
 
 1. Clone the repository:  
    ```sh
-   git clone https://github.com/your-username/BookSnap.git
+   https://github.com/aginasb2109/BookSnap.git
    cd BookSnap
    ```  
 2. Install dependencies:  
