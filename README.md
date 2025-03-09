@@ -45,7 +45,7 @@ This project uses the **Open Library API** to fetch book details dynamically.
    ```  
 5. Start the server using **nodemon**:  
    ```sh
-   nodemon server.js
+   nodemon index.js
    ```  
 6. Open `http://localhost:3000` in your browser.  
 
