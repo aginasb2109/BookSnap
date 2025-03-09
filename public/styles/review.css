@@ -10,11 +10,7 @@ header{
 }
 
 
-.review{
-    display:flex;
-    gap:20px;
 
-}
 .content{
     display:flex;
     gap:7px;
@@ -25,6 +21,41 @@ header{
 
 
 }
-.review{
+
+.review {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
     font-family: 'Poppins', sans-serif;
+}
+
+.content {
+    width: 60%;
+}
+
+.img {
+    width: 35%;
+    text-align: center;
+}
+
+.img img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media (max-width: 700px) {
+    .review {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .img {
+        width: 100%;
+    }
 }
