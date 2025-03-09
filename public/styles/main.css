@@ -1,161 +1,155 @@
-body{
-    margin:0px;
-    padding:0px;
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
-
-
-header, footer{
-    background: linear-gradient(to right, #001F3F, #003366, #004080);
-
+header, footer, .footer {
+  background: linear-gradient(to right, #001F3F, #003366, #004080);
 }
 
-  
-    
- 
-
-.input{
-    display: flex;
-    flex-direction: row;
-    gap:50px;
-    justify-content: center;
+.input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-
 
 .form-control {
-    width: 600px;  
-    height: 40px;  
-    font-size: 14px;
-    border-radius: 20px;
-}
-.but{
-    background : linear-gradient(to right, #001F3F, #003366, #004080);
-    color: aliceblue;
-}
-.but:hover{
-  color:#12b3f3;
+  width: 100%;  
+  max-width: 600px;  
+  height: 40px;  
+  font-size: 14px;
+  border-radius: 20px;
 }
 
+@media (max-width: 500px) {
+  .form-control {
+      max-width: 100%; 
+  }
+  .input {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
 
- .row h6 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px; 
- }
+.but {
+  background: linear-gradient(to right, #001F3F, #003366, #004080);
+  color: aliceblue;
+}
+
+.but:hover {
+  color: #12b3f3;
+}
+
+.row h6 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px; 
+}
 
 .row h6 p {
-    margin: 0;
-    font-weight: bold; 
-}  
-.card-body {
-    max-height: 350px; 
-    overflow: hidden; 
+  margin: 0;
+  font-weight: bold; 
 }
-
-.buttonclass{
-    display: flex;
-    gap:20px;
-
-}
-.searchbutton {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 300px; 
-}
-
-.searchbutton input {
-    flex: 1;
-    padding: 10px 40px 10px 15px; 
-    border-radius: 25px;
-    border: 1px solid #ccc;
-    outline: none;
-}
-
-.searchbutton button {
-    position: absolute;
-    right: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.searchbutton svg {
-    width: 20px;
-    height: 20px;
-    color: gray;
-}
-
-
-.alert alert-warning{
-    color:red;
-    
-}
-
-
 
 .card {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    border-radius: 12px;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-
-
-  .book-cover {
-    width: 100%;
-    height: 250px; 
-    object-fit: contain; 
-    border-radius: 10px; 
-    background: linear-gradient(to right, #001F3F, #003366, #004080); 
-    padding: 10px; 
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); 
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border-radius: 12px;
 }
 
-.book-cover:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
-}
-.card {
-    display: flex;
-    flex-direction: column;
-    height: 100%; 
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card-body {
-    flex-grow: 1; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
+  max-height: 350px; 
+  overflow: hidden; 
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
 }
 
-.buttonclass {
-    margin-top: auto; 
-}
 .card-body p, 
 .card-body h6, 
 .card-body .rating {
-    margin-bottom: 10px; 
+  margin-bottom: 10px; 
 }
 
 .card-body .rating {
-    display: flex;
-    align-items: center;
-    gap: 5px; 
+  display: flex;
+  align-items: center;
+  gap: 5px; 
 }
-.title{
-    font-family: 'Oswald', cursive;
+
+.buttonclass {
+  display: flex;
+  gap: 20px;
+  margin-top: auto;
+}
+
+.book-cover {
+  width: 100%;
+  height: 250px; 
+  object-fit: contain; 
+  border-radius: 10px; 
+  background: linear-gradient(to right, #001F3F, #003366, #004080); 
+  padding: 10px; 
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.book-cover:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+.searchbutton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 300px; 
+}
+
+.searchbutton input {
+  flex: 1;
+  padding: 10px 40px 10px 15px; 
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.searchbutton button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.searchbutton svg {
+  width: 20px;
+  height: 20px;
+  color: gray;
+}
+
+.alert.alert-warning {
+  color: red;
+}
+
+.title {
+  font-family: 'Oswald', cursive;
 }
 
 .footer {
-  background: linear-gradient(to right, #001F3F, #003366, #004080); 
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -202,42 +196,18 @@ header, footer{
   margin-top: 20px;
   font-size: 14px;
 }
+
 .top-content {
   text-align: center; 
   max-width: 800px;    
   margin: 0 auto;      
   padding: 20px;       
 }
-.top-content h3{
-  color:#003366
+
+.top-content h3 {
+  color: #003366;
 }
 
-.input {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.form-control {
-  width: 100%;  
-  max-width: 600px;  
-  height: 40px;  
-  font-size: 14px;
-  border-radius: 20px;
-}
-
-@media (max-width: 500px) {
-  .form-control {
-      max-width: 100%; 
-  }
-  .input {
-      flex-direction: column;
-      gap: 10px;
-  }
-}
 .navbar-toggler {
   border-color: white; 
 }
@@ -253,20 +223,3 @@ header, footer{
 .navbar-nav .nav-link:hover {
   color: #12b3f3 !important;
 }
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
